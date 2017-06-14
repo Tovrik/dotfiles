@@ -1,5 +1,6 @@
 set nocompatible
 filetype plugin on
+filetype off
 syntax on
 
 set encoding=utf-8
@@ -8,17 +9,19 @@ set relativenumber
 
 " Plugins 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
-Plugin 'Shougo/vimproc.vim', {'do': 'make'}
+Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call vundle#end()
 
 " Auto generate tags
