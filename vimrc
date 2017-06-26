@@ -3,10 +3,6 @@ filetype plugin on
 filetype off
 syntax on
 
-set encoding=utf-8
-set number
-set relativenumber
-
 " Plugins 
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
@@ -14,8 +10,6 @@ set rtp+=~/.fzf
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'leafgarland/typescript-vim'
@@ -32,11 +26,28 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Turn off arrow keys
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
 " Mouse useage
 set mouse=a
 set ttyfast
 
+" UI Stuff
+set encoding=utf-8
+set number
+set relativenumber
+set cursorline
+set hlsearch
 colorscheme solarized
+
+" Turn off backup files
+set nobackup
+set nowritebackup
+set noswapfile
 
 " Auto source .vimrc on save
 augroup reload_vimrc " {
