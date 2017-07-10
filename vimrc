@@ -1,5 +1,4 @@
 set nocompatible
-filetype plugin on
 filetype off
 syntax on
 
@@ -54,3 +53,6 @@ augroup reload_vimrc " {
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
+
+" Auto set syntax=typescript when filetype is *.ts
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
